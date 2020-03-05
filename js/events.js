@@ -3,18 +3,17 @@ const URL = "https://bits-oasis.org/registrations/events_details/";
 let ALL_EVENTS;
 
 const eventsNames = [
-    'Cricket',
-    'Vollyboll',
-    'Footboll',
-    'Antakshari',
+    'Dance',
+    'Drama',
+    'Fine Art',
+    'Music',
     'Photography',
-    'Fashion show',
-    'NFS Most Wanted',
+    'Fashion',
+    'Oratory',
     'Quizzing',
-    'Badminton',
-    'Cooking',
-    'T-Shirt Painting',
-    'CS 1.6'
+    'Humour',
+    'Films',
+    'Miscellaneous'
 ];
 
 function fetchEvents() {
@@ -207,7 +206,7 @@ function openAllEvents(type) {
     document.getElementsByClassName('all-events')[0].innerHTML = '';
 
     const eventNames = [];
-
+    
     ALL_EVENTS.map(event => {
         if (event.category_name == type) {
             event.events.map(eve => {
@@ -227,7 +226,7 @@ function openAllEvents(type) {
             }
         }
     });
-
+    
     let expSet = false;
     let tripSet  = false;
     eventNames.map(eventName => {
@@ -322,7 +321,7 @@ function viewEventDetails(eventName, eventType) {
                 }
             }
         });
-
+        
         setTimeout(() => {
             document.getElementById('event-details-tab').style.opacity = 1;
         }, 10);
@@ -344,7 +343,7 @@ function changeEventData(event) {
     document.querySelector('.event-day > span').innerHTML = event.date_time.substr(0, 10);
     document.querySelector('.event-time > span').innerHTML = event.time;
     document.querySelector('.event-venue > span').innerHTML = event.venue;
-
+    
     document.querySelectorAll('.event-description')[0].innerHTML = event.details;
     const descSpan = document.querySelectorAll('.event-description span');
     for(i = 0; i < descSpan.length; i++) {

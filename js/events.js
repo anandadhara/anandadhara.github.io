@@ -1,19 +1,22 @@
-const URL = "https://bits-oasis.org/registrations/events_details/";
+const URL = "";
 
 let ALL_EVENTS;
 
 const eventsNames = [
-    'Dance',
-    'Drama',
-    'Fine Art',
+    'Cricket',
+    'Vollyball',
+    'Football',
     'Music',
     'Photography',
     'Fashion',
-    'Oratory',
-    'Quizzing',
-    'Humour',
-    'Films',
-    'Miscellaneous'
+    'Cooking',
+    'Quiz',
+    'Badminton',
+   'NFS most wanted',
+   'CS 1.6',
+    'T-Shirt Painting',
+     'Carrom',
+    ' '
 ];
 
 function fetchEvents() {
